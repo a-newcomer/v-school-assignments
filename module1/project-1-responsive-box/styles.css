@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+}
+body {
+    width: 90vw;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.box {
+    height: 75px;
+    border-bottom: 3px solid white;
+}
+.pink {
+    background-color: #f5c6d6;
+}
+.magenta {
+    background-color: #ee2e84;
+}
+.sky {
+background-color: #85cfd8;
+}
+.apple {
+background-color: #8dc63f;
+}
+.orange {
+    background-color: #e76e34;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .box {
+        height: 150px;
+        border-bottom: 15px solid white;
+        border-right: 15px solid white;
+    }         
+    .magenta {
+        display: inline-block;
+        width: 25%;
+    }
+    div.magenta:last-child {
+        border-right: 0 solid #ee2e84;
+    }
+    .sky {
+        width: 50%;
+        display: inline-block;
+    }
+    div.sky:last-child {
+        border-right: 0 solid #ee2e84;
+    }    
+    .apple {
+        display: inline-block;
+        width: 74%;
+    }
+    div.orange {
+        display: inline-block;
+        width: 25%;
+        border-right: 5px solid white;
+    }
+        
+}
+

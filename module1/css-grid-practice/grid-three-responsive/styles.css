@@ -1,0 +1,89 @@
+p {
+    font-size: 28px;
+    color: #fff;
+    margin: 1rem;
+}
+.flex {
+    display: flex;
+    align-items: flex-start;
+    border-radius: 5px;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 1rem;
+    padding-top: 10vh;
+    max-width: 900px;
+    margin: 10vh auto;
+}
+.grid-item {
+    /* border: 2px solid magenta; */
+}
+header {
+    background-color: #666;
+}
+.sidebar {
+    
+}
+#sidebarOne {
+    background-color: #333;
+}
+main {
+    background-color: #3f3f3f;
+}
+#sidebarTwo {
+    background-color: #bbb;
+}
+footer {
+    background-color: #777;
+}
+@media only screen and (min-width: 768px) {
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    header {
+        grid-column: 1/-1;
+    }
+    #sidebarOne {
+        grid-column: 1/2;
+        /* Why do I have to do this? What am I doing wrong? */
+        align-self: stretch;
+    }
+    main {
+        grid-column: 2/4;
+    }
+    #sidebarTwo {
+        grid-column: 1/-1;
+    }
+    footer {
+        grid-column: 1/-1;
+    }
+}
+@media only screen and (min-width: 1200px) {
+
+
+    .grid-container {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    #sidebarOne {
+        grid-column: 1/2;
+        /* Why do I have to do this? What am I doing wrong? */
+      align-self: stretch;  
+    }
+    main {
+        grid-column: 2/3;
+    }
+    #sidebarTwo {
+        grid-column: 3/4;
+        align-self: stretch;
+    }
+
+}

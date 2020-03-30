@@ -1,0 +1,235 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1, h2,h3, h4, h5, h6 {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    padding: 5px 0;
+    color: #333;
+}
+p {
+    font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+    padding: 15px 0;
+    color: #333;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+body {
+    font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+    padding: 15px 0;
+    color: #333;
+}
+#home {
+    background-color: #ddd;
+}
+body#about {
+    background-color: pink;
+}
+                    /* * * header & menu * * * */
+
+header {
+    /* background-color: #fff; */
+    border: 2px solid #000;
+    position: fixed;
+    width: 100%;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid #000; */
+}
+#logo {
+    /* border: 2px solid #000; */
+}
+#logo a {
+    text-decoration: none;
+}
+#logo > a:hover {
+    color: rgb(216, 72, 72);
+}
+#navbar {
+    display: flex;
+    flex-basis: 40%;
+    /* border: 2px solid #000; */
+}
+#navbar > ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px dotted rgb(83, 4, 133); */
+}
+#navbar > ul > li {
+    text-decoration: none;
+    list-style-type: none;
+    /* border: 2px solid #000; */
+}
+#navbar a {
+    text-decoration: none;
+    color: rgb(24, 2, 108);
+}
+#navbar a:hover {
+    color: rgb(136, 136, 220);
+}
+#socialMedia {
+    flex-basis: 10%;
+    /* border: 2px solid #000; */
+}
+#socialMedia > ul {
+    display: flex;
+    justify-content: space-between;
+    /* border: 3px solid rgb(159, 14, 103); */
+}
+#socialMedia > ul > li {
+    text-decoration: none;
+    list-style-type: none;
+    /* border: 2px solid #000; */
+    background-color: #000;
+    padding: 10px;
+    padding-left: 15px;
+    min-width: 40px;
+    border-radius: 50%;
+    margin: 3px;
+}
+#socialMedia a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+                    /* * * main * * * */
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 10vh;
+    min-height: 100vh;
+}
+#home main {
+    flex-direction: column;
+}
+main > article {
+
+}
+
+article {
+    min-height: 30vh;
+    /* border: 2px solid #000; */
+}
+
+                    /* * * footer * * * */
+
+footer {
+    display: flex;
+    flex-flow: column wrap;
+}
+#footerBox {
+    display: flex;
+    width: 100%;
+}
+.footCol {
+    min-height: 10vh;
+    min-width: 25%;
+    padding: 1rem 2rem;
+    border: 2px solid #000;
+}
+footer p {
+    text-align: center;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    padding-top: 10px;
+}
+.footer-menu > li {
+    text-decoration: none;
+    list-style-type: none;
+    margin-left: 1rem;
+}
+#footDiv4 p {
+    text-align: left;
+}
+#footDiv2 figure {
+    display: flex;
+    width: 100%;
+}
+
+                    /* * * Gallery Page * * * */
+
+body#gallery {
+    background: cyan;
+}
+#galleryContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 20vw);
+    grid-gap: 2vw;
+    /* border: 1px solid #222; */
+}
+.gallery-header {
+    grid-column: 1/-1;
+}
+.grid-item {
+    /* width: 20vw; */
+    height: 20vw;
+    background-color: #fff;
+    border: 1px solid #222;
+    box-shadow: 2px 2px 30px rgba(0,0,0, .5);
+}
+                    /* * * Regular Pages * * * */
+
+.page-container {
+    display: grid;
+    grid-template-columns: repeat(3, 20vw);
+    grid-gap: 2vw;
+    width: 95vw;
+    max-width: 1200px;
+    /* border: 1px solid #222; */
+}                   
+.page-header, .page-container p {
+    grid-column: 1/-1;
+}
+.page-container article {
+    grid-column: 1/-1;
+}
+
+
+                    /* * * About Page * * * */
+
+
+                    /* * * Contact Page * * * */
+
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    #navbar > ul, #socialMedia > ul {
+        flex-direction: column;
+        align-items: center;
+        /* background-color: pink; */
+    }
+    #footerBox {
+        flex-flow: row wrap;
+    }
+    .footCol {
+        flex-basis: 50%;
+    }
+    main {
+        margin-top: 210px;
+        min-height: 60vh;
+    }
+}
+@media only screen and (max-width: 498px) {
+    
+    footer {
+        flex-flow: column;
+    }
+    #footerBox {
+        flex-flow: column nowrap;
+    }
+    .footCol {
+        flex-basis: 100%;
+    }
+}

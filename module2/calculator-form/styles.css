@@ -1,0 +1,40 @@
+body {
+    padding: 10vw;
+}
+form {
+    /* border: 1px solid black; */
+    box-shadow: 2px 2px 20px rgba(0,0,0, .4);
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2vw;
+}
+div {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: flex-start;
+    align-items: center;
+}
+button, input {
+    padding: 10px 15px;
+    font-size: 1.5em;
+    margin-top: 10px;
+    max-width: 150px;
+    margin: 0 2vw;
+}
+input {
+    box-shadow: 2px 2px 10px rgba(0,0,0, .2) inset;
+    border: none;
+}
+button {
+    border-radius: 5px;
+    background-color: #4b0082;
+    color: #fff;
+    font-weight: bold;
+    /* align-self: flex-end; */
+
+}
+button:hover {
+    background-color: #804aa5;
+}
