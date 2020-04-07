@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<HTML:5>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mario Pest Control</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        
+            <header class="flex-row">
+                <img id="headerImg" src="assets/mario-m-logo.png" alt="Mario logo">
+                <h1>Mario Pest Control Invoice</h1>
+            </header>
+            <main>
+                <form action="" name="invoice">
+                    <div id="titleRow" class="row">
+                        <h3 class="itemImgBox"> </h3>
+                        <h3 class="itemName">Pest Type</h3>
+                        <h3 class="itemPrice" >Item Price</h3>
+                        <h3 class="baddieAmountLabel" >Amount Caught</h3>
+                        <h3 class="rowTotal" >Row Total</h3>
+                    </div>
+                    <div id="cheepCheepRow" class="row itemRow flex-row">
+                        <figure class="itemImgBox flex-col"><img src="assets/mario-cheep-cheep.png" alt="" class="itemImg" id=""></figure>
+                        <p class="itemName" id="">Cheep-Cheep</p>
+                        <p class="itemPrice" id="">11 Coins</p>
+                        <label for="" id="" class="baddieAmountLabel flex-col">
+                            <input type="number" name="cheepCheepAmount" min="0" id="" class="baddieAmount"></label>
+                        <p class="rowTotal" id="cheepTotalBox"></p>
+                    </div>
+                    <div id="goombaRow" class="row itemRow flex-row">
+                    <figure class="itemImgBox flex-col"><img src="assets/mario-goomba.png" alt="" class="itemImg" id=""></figure>
+                        <p class="itemName" id="">Goomba</p>
+                        <p class="itemPrice" id="">5 Coins</p>
+                        <label for="" id=""  class="baddieAmountLabel flex-col">
+                            <input type="number" name="goombaAmount" id="" class="baddieAmount"></label>
+                        <p class="rowTotal" id="goombaTotalBox"></p>
+
+                    </div>
+                    <div id="baBombRow" class="row itemRow flex-row">
+                    <figure class="itemImgBox flex-col"><img src="assets/mario-ba-bomb.jpg" alt="" class="itemImg" id=""></figure>
+                        <p class="itemName" id="">Ba-Bomb</p>
+                        <p class="itemPrice" id="baBombPrice">7 Coins</p>
+                        <label for="" id=""  class="baddieAmountLabel flex-col">
+                            <input type="number" name="baBombAmount" id="" class="baddieAmount"></label>
+                        <p class="rowTotal" id="baBombTotalBox"></p>
+
+                    </div>
+                    <div id="totalPriceRow" class="row flex-row">
+                        <div></div>
+                        <div class="itemName"></div>
+                        <div></div>
+                        <button id="totalBtn">Calculate Total Price</button>
+                        <h3 id="totalPrice"></h3>
+                    </div>
+                    
+
+
+                </form>
+            </main>
+            <footer>
+                <div id="section1" class="flex-column">
+                    <h4>Contact:</h4>
+                    <p>mario.nintendo.com</p>
+                    <p>email@unknown.com</p>
+                </div>
+                <div id="section2" class="flex-column">
+                    <img id="footerImg" src="assets/mario-m-logo.png" alt="Mario logo">
+                </div>
+                <div id="section3" class="flex-column">
+                    <h4>U.S. Address</h4>
+                    <p>4600 150th Ave NE<br>
+                        Redmond, WA 98052</p>
+                </div>
+            </footer>
+        <script src="index.js">
+        </script>
+    </body>
+    
+</HTML:5>

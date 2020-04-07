@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Travel Form Module 2</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <form action="" name="travelForm">
+            <h1>Hapsburg Airlines</h1>
+            <h2><i>Anywhere You Want to Go -<br>As long as it's a City in Central Europe</i> 
+            </h2>
+            <section id="idInfo">
+                <h3>Personal Information:</h3>
+                <div class="nameLabel">
+                    <p id="desktop">First Name: </p>
+                    <p id="desktop">Last Name: </p>
+                    <p id="phone">First & Last Names</p>
+                </div> 
+                <div class="name">
+                    <input type="text" name="fName" id="fName">
+                    <input type="text" name="lName" id="lName">
+                </div>
+                    Age: <input type="number" name="age" id="">
+                
+                <h3>Gender:</h3> 
+                <div id="radioBoxes">
+                    <label for="" class="sex" >
+                        <input type="radio" name="gender" value="female"><span>female</span>
+                    </label>
+                    <label for="" class="sex" >
+                        <input type="radio" name="gender" value="male"> <span>male</span>
+                    </label>
+                    <label for="" class="sex" >
+                        <input type="radio" name="gender" value="other"><span>other</span>
+                    </label>
+                    <label for="" class="sex" >
+                        <input type="radio" name="gender" value="who cares?"><span>who cares?</span>
+                </label>
+            </div>
+            </section>
+
+            <section id="foodPreferences">
+                <h3>Food Preferences:</h3>
+                <label for="" class="food">
+                    <input type="checkbox" name="foodPreference" value="spatzle"><span>Spatzle</span>
+                </label> 
+                <label for="" class="food">
+                    <input type="checkbox" name="foodPreference" value="gnocchi"><span>Gnocchi</span>
+                </label> 
+                <label for="" class="food">
+                    <input type="checkbox" name="foodPreference" value="halushki"><span>Halushki</span>
+                </label>  
+                <label for="" class="food">             
+                    <input type="checkbox" name="foodPreference" value="mac n'cheese"><span>Mac n'Cheese</span>
+            </label> 
+            </section>
+
+            <section id="destination">
+                <h3>Destination City:</h3> 
+                <select name="city" id="">
+                    <option>Select Destination City</option>
+                    <option value="Prague">Prague</option>
+                    <option value="Budapest">Budapest</option>
+                    <option value="Vienna">Vienna</option>
+                    <option value="Liubliana">Liubliana</option>
+                    <option value="Trieste">Trieste</option>
+                    <option value="Regensburg">Regensburg</option>
+                </select>
+            </section>
+
+            <button id="submitBtn">Submit</button>
+        </form>
+        <script src="index.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-image: url("Imperial_Coat_of_Arms_of_the_Empire_of_Austria.svg.png");
+    background-color: #cccccc;
+    /* height: 500px; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10vw;
+    padding: 2vw 5vw;
+    border: .5px solid gray;
+    box-shadow: 5px 5px 20px rgba(0, 0,0, .4);
+    background-color: rgba(255,255,255,.8);
+}
+section {
+
+}
+#radioBoxes {
+    display: flex;
+    flex-direction: column;
+}
+.sex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+}
+#idInfo {
+    display: flex;
+    flex-flow: column wrap;
+}
+.nameLabel {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
+}
+.nameLabel > p {
+    width: 42%;
+    margin: 0;
+    padding: 0;
+}
+.nameLabel #phone {
+    display: none;
+}
+.name {
+    display: flex;
+    justify-content: flex-start;
+}
+#destination {
+    display: flex;
+    flex-flow: column wrap;
+}
+#destination > select {
+    width: 250px;
+}
+select {
+    width: 150px;
+}
+#foodPreferences {
+    display: inline-flex;
+    flex-flow: column wrap;
+}
+input, select, button {
+    padding: 10px 15px;
+    margin: 15px;
+    max-width: 50%;
+    font-size: 18px;
+}
+#submitBtn {
+    padding: 10px 15px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: #4b0082;
+    color: #fff;
+    font-weight: bold;
+    align-self: flex-end;
+}
+@media only screen and (max-width: 600px) {
+
+    .name {
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    /* .nameLabel {
+        display: none;
+    } */
+    .nameLabel #phone {
+        display: flex;
+    }
+    .nameLabel #desktop {
+        display: none;
+    }
+}

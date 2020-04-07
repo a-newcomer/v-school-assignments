@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Prompt', sans-serif;
+    color: #c0f;
+}
+h1,h1,h3,h4,h5 {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
+}
+p {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 200;
+}
+main {
+    margin-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: #fcf;
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+footer {
+    /* background-color: #fcf; */
+    padding: 5vh;
+    padding-bottom: 2vh;
+    /* width: 80vw;
+    height: 10vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    /* border: #f0f 1px solid; */
+}
+#counter, button {
+    padding: 5px 15px;    
+    font-size: 3rem;
+}
+#counter {
+    background-color: ivory;    
+    color: #c0f;
+    text-align: center;width: 10vw;
+    height: 7vh;
+    min-height: 3rem;
+    margin-bottom: 15vh;
+}
+button {
+    background-color: #c0f;
+    color: ivory;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+    bottom: 20vh;
+}
