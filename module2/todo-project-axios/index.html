@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios ToDo Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>ToDo Project with Axios</h2>
+    <main id="container">
+        <form name="toDoForm">
+            <input type="text" name="title" placeholder="Item" required="true">
+            <input type="text" name="description" placeholder="Details">
+            <input type="url" name="imageURL" id="imageURL" placeholder="Image URL">
+            <button id="formBtn">Add to List</button>        
+        </form>
+        <h1>To Do:</h1>
+        <ol id="toDoList">
+            <!-- <li class="toDoHolder">
+                <h3 class="toDoH3">Hardcoded To Do Item</h3>
+                <p class="toDoP">a long explanation of what I have to do</p>
+                <form class="buttonBox">
+                    <div class="doneLabel">
+                        Completed 
+                        <input type="checkbox" name="done" class="checkDone">
+                    </div>
+                    <button class="removeBtn">Remove Item</button>                
+                </form>
+            </li> -->
+        </ol>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -35,7 +35,7 @@ function walk() {
         } else attackEnemy() see above, 
         then enemy attacks back, see above
 
-    } if "i" inventory, print a list of the traeasure accumulated by player from the enemy, the player's name and health points
+    } if "i" inventory, print a list of the treasure accumulated by player from the enemy, the player's name and health points
 }
 
 */
@@ -196,7 +196,7 @@ let enemyList = ["queenBee", "cheerleadingCap", "minions"]
                 } else { //it must be slink away attempt false = slink
                     console.log("You chose to flee. But can you escape in peace?")
                     let flightSuccess = randomCalculator(2)
-                    if(flightSuccess>0) {
+                    if(flightSuccess > 0) {
                         console.log("\nWhew! You escaped this time! You can continue down the hall towards class.\n\nNo glory in that though, is there?")
                         break
                     } else {

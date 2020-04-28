@@ -1,0 +1,74 @@
+{
+    "menu" : {
+        "drinks": [
+            {
+                "name": "espresso",
+                "ingredients":["roasted coffee beans", " water"],
+                "description": "Nectar of the Gods"
+            }, 
+            {
+
+                "name": "cola",
+                "ingredients":["carbonated water","mystery, but there's a lot of sugar involved"],
+                "description": "Black, overly sweet carbonated beverage with medicinal flavor."
+
+            }
+        ],
+        "starters" : [
+            {
+                "name": "nachos",
+                "ingredients":["taco chips", "cheese of some kind", "flour or baking soda", " water", "optional: pickled jalapenos"],
+                "description": "Melted cheese mixture poured over tortilla chips - junk food classic"
+            }, 
+            {
+
+                "name": "",
+                "ingredients":[],
+                "description": ""
+
+            }
+        ],
+        "salads" : [ 
+            {
+            "name": "blue cheese & pear",
+            "ingredients":["dark green lettuce", "bartlett pears", "chopped walnuts", "dried cherries","olive oil", "lemon juice", "salt", "pepper", "blue cheese or gorgonzola"],
+            "description": "Crumbled blue cheese, chopped pears and walnuts with dried cherry accents mixed into a bitter fresh lettuce."
+        }, 
+        {
+
+            "name": "Caesar",
+            "ingredients":["Roman lettuce", "coddled Egg", "anchovies or smoked salmon", "croutons", "fresh-grated parmasian cheese", "crushed garlic", "vinegar", "olive oil","chopped chicken optional"],
+            "description": "What's to say? Classic salad with strong flovors - delicuous and satisfying."
+
+        }
+        ],
+        "sandwiches" : [ 
+            {
+            "name": "Rueben",
+            "ingredients":["Rye Bread", "bitter mustard", "corned beef sliced thin", "sauerkraut"],
+            "description": "Classic New York deli sandwich - like no other."
+        }, 
+        {
+
+            "name": "Club Sandwich",
+            "ingredients":["toasted wheat or white bread - 3 slices", "sliced tomato", "mayo", "bacon", "iceburg lettuce", "sliced smoked turkey"],
+            "description": "Three layer sandwich originating in country clubs early in the 20th century - recipe varies, with some adding onions, mustard or even avocado."
+
+        }
+        ],
+        "desserts":[
+            {
+                "name": "carrot cake",
+                "ingredients":["carrots", "raisins", "flour", "sugar or honey", "oil","other baking ingredients", "nuts optional", "cream cheese icing"],
+                "description": "Classic American hippie food first known to be served at a health=food restaurnant in Upstate New York in the early 1970's - now served all over the world."
+            }, 
+            {
+
+                "name": "Brownies",
+                "ingredients":["bitter baking chocolate", "flour, etc", "sugar", "butter"],
+                "description": "Classic American sweet best served with chocolate sauce and vanilla ice cream."
+
+            }
+        ]
+    }
+}
