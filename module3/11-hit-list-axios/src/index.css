@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding-top: 5vh;
+  text-align: center;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+code,p,li {
+  font-family: Consolas, 'Courier New',
+    monospace;
+}
+#root {
+
+}
+.App {
+  width: 95vw;
+  max-width: 1050px;
+
+}
+ul.hitList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-gap: 5vw;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10vh;
+}
+li.target {
+  border: .5px solid #666;
+  padding: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, .6);
+  background-size: cover;
+  background-position: center;
+  /* making a perfect circle with below 3 commands */
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  display: flex;
+  /* this keeps the words centered */
+  align-items: center;
+  justify-content: center;
+  /* used with auto-fit, the below centers each circle in its grid-space, so the whole block will always be centerd */
+  margin: 0 auto;
+}
+li h3 {
+  color: rgba(255,255,255, 1);
+  text-shadow: 2px 2px 2px black;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+}
+

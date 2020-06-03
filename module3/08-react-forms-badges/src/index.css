@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  padding: 5vh 10vw;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+p {
+  font-family: Consolas, 'Courier New', monospace;
+}
+h1, h2, h3, h4, h5 {
+  padding: 15px auto;
+}
+#root {
+
+}
+.App {
+  display: flex;
+  flex-direction: column;
+
+}
+/* * * * * * * * * * * * FORM STYLING * * * * * * * * * * * */
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(45%, 1fr));
+  grid-template-rows: repeat(6, 70px);
+  grid-gap: 15px;
+  max-width: 800px;
+}
+textarea {
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  width: 95%;
+  height: 100%;
+}
+input, button {
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  width: 35vw;
+  max-width: 350px;
+  padding-right: 5px;
+}
+/* input:invalid, textarea:invalid {
+  border: 4px red solid;
+  box-shadow: 3px 3px 15px rgba(200,0,20, .7);
+} */
+button {
+  margin-right: 20px;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  color: white;
+  background-color: rgb(2, 118, 35);
+  border-radius: 5px;
+  align-self: flex-start;
+  justify-self: flex-end;
+  width: 170px;
+  grid-row: 6/7;
+  grid-column: 2/3;
+}
+button:disabled {
+  background-color: rgb(225,225,225);
+  color: rgb(150, 150, 150);
+}
+button:disabled:hover {
+  background-color: rgb(225,225,225);
+  color: rgb(150, 150, 150);
+}
+input#phone {
+}
+button:hover {
+  background-color: rgb(4, 155, 46);
+}
+label {
+  font-weight: 500;
+  padding: 5px;
+  line-height: 1.8;
+}
+#textareaLabel {
+  width: 98%;
+  grid-column: 1/3;
+  grid-row: 4/5;
+}
+
+/* * * * * * * * * * * * BADGE STYLING * * * * * * * * * * * */
+.badgeHolder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  /* border: 3px dotted rgb(191, 2, 20); */
+
+}
+.badge {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  max-width: 500px;
+  border-radius: 15px;
+  background-color: rgb(245, 102, 6);
+  color: #fff;
+  box-shadow: 5px 5px 20px rgba(0,0,0,.6)
+}
+.badge:nth-of-type(3n-1) {
+  background-color: rgb(125, 2, 226);
+}
+.badge:nth-of-type(3n) {
+  background-color: rgb(20, 141, 1);
+}
+.badgeHeader {
+  display: flex;
+  justify-content: center;
+}
+.badgeMain {
+  margin: 5px 5px 20px 5px;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #333;
+}
+.row1,.row2 {
+  display: flex;
+  justify-content: space-around;
+  margin: 5% 0;
+}
+.badgeMain span {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  min-width: 48%;
+  margin-right: 2%;
+}
+.badgeMain p {
+  margin: 0 0 0 5px;
+}
+.myStory {
+  min-height: 3rem;
+}
+/* * * * * * * * * * * * MEDIA QUERIES * * * * * * * * * * * */
+
+@media only screen and (max-width: 565px) {
+  body{
+    padding: 5vw;
+  }
+  form {
+    grid-template-columns: repeat(1, minmax(95%, 1fr));
+    grid-template-rows: repeat(10, 60px);
+    }
+   input, button {
+     width: 90%;
+   }
+   #textareaLabel {
+    grid-column: 1/-1;
+    grid-row: 7/9;
+   }
+   textarea {
+     width: 84%;
+   }
+   button {
+    grid-column: 1/-1;
+    grid-row: 10/11;
+    width: 170px;
+   }
+}
