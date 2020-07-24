@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 5vh;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+h6,a, button {
+  font-size: 14px;
+}
+button {
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 15px;
+  background-color: #cd1000;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #f10;
+}
+code, p {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    font-size: 14px;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.App {
+  padding: 2vw;
+  box-shadow: 2px 2px 30px rgba(150,0,0,.5);
+  max-width: 600px;
+
+}
+.navList{
+  flex-direction: column;
+}

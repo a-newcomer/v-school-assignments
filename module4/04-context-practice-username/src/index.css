@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 5vh 10vw;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+a {
+  font-family: Consolas, 'Courier New',
+    monospace;
+}
+header {
+  font-weight: bold;
+  font-size: 18px;
+}
+.App {
+box-shadow: 3px 3px 15px rgba(50,0,100, .3);
+padding: 5vw;
+width: 60vw;
+max-width: 600px;
+margin: 0 auto;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+.formElements {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  min-height: 20vh;
+}
+button, input {
+  padding: 10px;
+  font-size: 16px;
+}
+button {
+  background-color: rgb(50,0,100);
+  color: #fff;
+  font-weight: bold;
+} 

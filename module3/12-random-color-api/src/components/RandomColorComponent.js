@@ -11,7 +11,7 @@ class RandomColorComponent extends React.Component {
     }
     componentDidMount() {
         this.setState(
-            axios.get('http://www.colr.org/json/color/random')
+            axios.get('http://www.colr.org/json/color/random?timestamp=${new Date().getTime()}')
             .then( results => {
 
               console.log("data from api: " + results.data.colors[0].hex)

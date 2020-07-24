@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, p {
+  font-family: 'Segoe UI', 'Helvetica Neue',
+  sans-serif;
+  font-weight: 200;
+  /* font-family: Consolas, 'Courier New',
+    monospace; */
+}
+h1{
+  font-size: 3rem;
+}
+h3 {
+  font-weight: 400;
+}
+header img {
+  width: 75px;
+  height: 75px;
+}
+#root {
+
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+}
+header {
+  width: 100vw;
+  margin: 0;
+}
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 95vw;
+  max-width: 1050px;
+  color: whitesmoke;
+}
+.branding {
+  display: flex;
+  align-items: center;
+}
+nav {
+  min-width: 250px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+nav .link{
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 700;
+  font-size: 20px;
+}
+.link:hover {
+  color: rgb(189, 184, 184);
+  text-shadow: 1px 1px 4px 4px rgb(189, 184, 184);
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5vh;
+  /* height: 65vh; */
+  margin: 5vh auto;
+  width: 95%;
+  max-width: 900px;
+  flex-grow: 2;
+}
+.about {
+  color: #9d0404;
+}
+.home {
+  
+}
+.services {
+  color: #777;
+}
+footer {
+  text-align: center;
+  background-color: #111;
+  flex-shrink: 0;
+}
+footer p {
+  color: #fff;
+  font-weight: 500;
+}
+@media (max-width: 1115px) {
+  main {
+    
+  }
+}

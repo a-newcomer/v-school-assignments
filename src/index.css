@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 5vh;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, p {
+  font-family: Consolas, 'Courier New',
+    monospace;
+}
+h1{
+  font-size: 3rem;
+}
+img {
+  width: 75px;
+  height: 75px;
+}
+#root {
+
+}
+.App {
+  display: flex;
+  align-items: center;
+}
