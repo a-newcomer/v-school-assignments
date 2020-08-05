@@ -1,0 +1,28 @@
+body {
+    background-color: #ffccff;
+    color: #480348;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Roboto', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+    margin: 0 auto;
+    width: 85vw;
+    max-width: 1000px;
+    display: flex;
+    flex-flow: column wrap;
+}
+.cardHolder {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 3vh;
+}
+.toDoCard {
+    padding: 1vh 3vh;
+    background-color: #feebff;
+    box-shadow: 2px 2px 20px rgba(0,0,0,.5);
+}
