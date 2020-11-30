@@ -14,7 +14,7 @@ function getBounties() {
 }
 function addBounty(newBounty) {
   axios.post("/bounties", newBounty)
-    .then(res => setBounties(prevBounties => [newBounty, ...prevBounties],
+    .then(res => setBounties(prevBounties => [...prevBounties, newBounty],
       console.log(newBounty._id)))
     .catch(err => console.log(err))
 }
@@ -32,6 +32,16 @@ function editBounty(updatesBody, bountyId) {
     })
     .catch(err => console.log(err))
 }
+function handleFilter(e) {
+  if (e.target.value === "all"){
+    getBounties()
+  }
+  else if(e.target.value === "sith"||"jedi"||"unknown") {
+    axios.get(`/bounties/type?type=${e.target.value}`)
+    .then(res => setBounties(res.data))
+    .catch((err)=> console.log(err))
+    } 
+}
 
 useEffect(()=> {
   getBounties()
@@ -43,6 +53,14 @@ useEffect(()=> {
 
       <AddBountyForm 
         submit={addBounty} btnText="Add Bounty"/>
+
+      <h3>View by Order</h3>
+      <select onChange={handleFilter} className="filterForm">
+        <option value="all">All Order Types</option>
+        <option value="jedi">Jedi</option>
+        <option value="sith">Sith</option>
+        <option value="unknown">Unknown</option>
+      </select>
 
       <main className="bountyHolder" >
         {bounties.map(bounty => 

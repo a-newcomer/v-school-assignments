@@ -24,7 +24,13 @@ function App() {
           </Route>
         </Switch>
       </div>
-      <h3 style={{alignSelf: "center"}}>Ann's React Project Module 4</h3>
+      <footer>
+        <p>The change in hospitalizations statistic was chosen in spite of its delay in reflecting the pandemic situation, as it is the least able to be influenced by political factors.</p>
+        <p>Data is from <a href="https://api.covidtracking.com/data/api" rel="noopener noreferrer" target="_blank" >The COVID Tracking Project</a> at The Atlantic Magaizine, taken directly from the websites of local or state/territory public health authorities.</p>
+        <p>The project uses <a href="https://formidable.com/open-source/victory/" rel="noopener noreferrer" target="_blank" >Victory by Formidable</a> to visualize the data.</p>
+        <h3><a href="https://annssite.com/portfolio.html" rel="noopener noreferrer" target="_blank" >Ann's</a> React Project for VSchool's Module 4</h3>
+      </footer>
+      
   </div>
   );
 }

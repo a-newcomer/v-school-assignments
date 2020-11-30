@@ -78,22 +78,23 @@ class Person {
 
 //Player constructor - an extension of the Person class, needed because of the different way loot works for the player - the player needs a list of loot, not a single piece of it
 class Player extends Person {
-    
-    constructor(name, currentHealth, lootList){
-        //you have to list the properites you're taking from the parent class like the below
-        super(name, currentHealth)
-        //then you can add any special properties - in this case, I need an array for the loot
-        this.lootList = lootList
-        }
-        this.lootList.push(loot)
+
+  constructor(name, currentHealth, lootList){
+      //you have to list the properites you're taking from the parent class like the below
+      super(name, currentHealth)
+      //then you can add any special properties - in this case, I need an array for the loot
+      this.lootList = lootList
+      }
+      //addLoot() {
+        //this.lootList.push(loot)
         //return this.lootList
-    }
-    listLoot(lootList) {      
-        console.log("\nYour current place in the pecking order: ")
-        let isLoot = (this.lootList.length > 0) ? "You have" + this.lootList.map( (loot)=>{return loot} ): "\nYou haven't climbed a single rung of the pecking order."
-        console.log(isLoot)
-        console.log("\nYour current energy: " + this.currentHealth)
-    }
+  //}
+  listLoot(lootList) {      
+      console.log("\nYour current place in the pecking order: ")
+      let isLoot = (this.lootList.length > 0) ? "You have" + this.lootList.map( (loot)=>{return loot} ): "\nYou haven't climbed a single rung of the pecking order."
+      console.log(isLoot)
+      console.log("\nYour current energy: " + this.currentHealth)
+  }
 }
 //I made this list to randomly choose an enemy and then get rid of her when I'm done
 let enemyList = ["queenBee", "cheerleadingCap", "minions"]
@@ -116,8 +117,8 @@ let enemyList = ["queenBee", "cheerleadingCap", "minions"]
             console.log(`\n You react!\nYou have dealt the enemy ${damagePoints} damage points! They have ${enemyHealth} points left!`)        
         } else {
             console.log(`\n\nYou won that battle!\n\n ${enemy.name} is finally vanquished! You now have ${enemy.loot}.`)
-            player.addLoot(enemy.loot)
-            //player.currentHealth = player.currentHealth + 10
+            player.lootList.push(enemy.loot)
+            player.currentHealth = player.currentHealth + 8
             //player.listLoot(player.lootList)
             //remove enemy from enemy list - write function for this
             enemyIsAlive = false
@@ -162,6 +163,7 @@ let enemyList = ["queenBee", "cheerleadingCap", "minions"]
         //If the enemy list is emtpy && there are no enemies still alive in the system that the player has slunk away from, then the player wins
         } else if(enemy.currentHealth <= 0){
             console.log(`\nYou have vanquished all your foes, racked up a list of popluarity points and made it class on time!\n\n * * * * * YOU WIN! * * * * * * *`)
+            gameActive = false
         //I may have changed the game so no enemies can lurk in the system after createEnemy has been called, but just in case, here's the message:    
         } else {
             console.log("You're almost there, but not all your foes have been vanquished yet!")

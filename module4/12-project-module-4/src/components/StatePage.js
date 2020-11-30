@@ -14,7 +14,7 @@ function StatePage(props) {
   let [dailyData, setDailyData] = useState([])
 
   useEffect(() => {
-    axios.get(`https://covidtracking.com/api/v1/states/${stateParam.toLowerCase()}/daily.json`)
+    axios.get(`https://api.covidtracking.com/api/v1/states/${stateParam.toLowerCase()}/daily.json`)
 
     .then(response => setDailyData(response.data.map(
       day => {
@@ -65,10 +65,16 @@ function StatePage(props) {
         scale={{ x: "time", y: 'linear'}}
         >
           <VictoryLabel 
-          text="PEOPLE" 
-          x={30} y={30} 
-          textAnchor="middle"
-          style={{fontSize: 12}}
+            text={foundState.name} 
+            x={360} y={35} 
+            textAnchor="middle"
+            style={{fontSize: 24, fontWeight: 400, fill: "#280085", stroke: "#280085"}}
+          />
+          <VictoryLabel 
+            text="PEOPLE" 
+            x={30} y={30} 
+            textAnchor="middle"
+            style={{fontSize: 12}}
           />
           <VictoryAxis
             // tickValues specifies both the number of ticks and where

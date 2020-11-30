@@ -5,6 +5,7 @@ function AddBountyForm(props) {
         firstName: props.firstName || "",
         lastName: props.lastName || "",
         price: props.price || 0,
+        type: props.type || "",
         alive: props.alive || true
     }
     const [inputs, setInputs] = useState(initInputs)
@@ -20,10 +21,10 @@ function AddBountyForm(props) {
     }
 
     function handleSubmit(e) {
-        e.preventDefault()
         props.submit(inputs, props._id)
         setInputs(initInputs)
         console.log(inputs)
+        e.preventDefault()
     }
     return (
         <form onSubmit={handleSubmit}>
@@ -52,7 +53,15 @@ function AddBountyForm(props) {
                 onChange={handleChange}
                 placeholder="" />
                 </label>
-            <label className="checkBoxLabel"><span>Currently Living?</span>
+            <label>Order
+            <input
+                type="text"
+                name="type"
+                value={inputs.type}
+                onChange={handleChange}
+                placeholder="Sith, Jedi or Unknown" />
+                </label>
+            <label className="checkBoxLabel"><span>Bring them in Alive?</span>
             <input
                 type="checkbox"
                 name="alive"

@@ -9,7 +9,8 @@ function Bounty(props) {
             <>
             <h2>{props.firstName} {props.lastName}</h2>
             <h4>Price: {props.price}</h4>
-            <h3>{props.alive? "Alive": "Dead"}</h3>
+            <h4>{props.type} order</h4>
+            <h4>Wanted: <span className="alive">{props.alive? "Alive": "Dead"}</span></h4>
             <div className="btnHolder">
             <button 
                 className="edit-btn"

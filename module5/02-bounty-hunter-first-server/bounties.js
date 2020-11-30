@@ -13,8 +13,8 @@ let bounties = [
         _id: uuid()
     },
     {
-        firstName: "Baby Yoda",
-        lastName: "The Child",
+        firstName: "The Child,",
+        lastName: "aka Baby Yoda",
         price: 1000,
         alive: true,
         type: "neither",
@@ -38,11 +38,12 @@ let bounties = [
     },
     {
         firstName: "Ziro",
-        lastName: "The Hutt",
+        lastName: "the Hutt",
         price: 45,
         alive: true,
         type: "neither",
         _id: uuid()
     }
-]
+] 
+
 module.exports = bounties

@@ -12,7 +12,7 @@ function EntryPage(props) {
   let [dailyUSData, setDailyUSData] = useState([])
 
   useEffect(() => {
-    axios.get(`https://covidtracking.com/api/v1/us/daily.json`)
+    axios.get(`https://api.covidtracking.com/api/v1/us/daily.json`)
     
     .then(response => setDailyUSData(response.data.map(
       day => {
@@ -43,6 +43,12 @@ function EntryPage(props) {
         domainPadding={{ x: [0, 10], y:[0,0] }}
         scale={{ x: "time", y: 'linear'}}
         >
+        <VictoryLabel 
+        text="USA" 
+        x={365} y={40} 
+        textAnchor="middle"
+        style={{fontSize: 24, fontWeight: 600, stroke: "#000", fill: "#cc0000"}}
+        />
           <VictoryLabel 
           text="PEOPLE" 
           x={30} y={30} 
@@ -66,6 +72,7 @@ function EntryPage(props) {
           <VictoryBar
           //style={{ data: { strokeWidth: 3, fill: "#c43a31", stroke: "cc0000" } }}
           data={dailyUSData}
+          style={{data: {stroke: "#cc0000"}}}
           x="date"
           y="hospitalizedIncrease"
           />

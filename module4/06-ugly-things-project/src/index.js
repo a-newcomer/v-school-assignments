@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {CardContextProvider} from './components/context/CardContext'
 
 ReactDOM.render(
-  <React.StrictMode>
+  <CardContextProvider>
     <App />
-  </React.StrictMode>,
+  </CardContextProvider>,
   document.getElementById('root')
 );
 
