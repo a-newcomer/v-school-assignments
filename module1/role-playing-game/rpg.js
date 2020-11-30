@@ -183,7 +183,7 @@ let enemyList = ["queenBee", "cheerleadingCap", "minions"]
             //create a boolean so I can use a while loop and player will get bumped out when needed
             enemyIsAlive = true
             console.log(`\nOh No! ${enemy.name} is standing in front of you. \nIt looks like you won't be able to get to class in peace.`)
-            console.log(`\nWhat's she shouting to the entire hall? "` + enemy.threatMessage + `"\n\nOMG! How embarrassing! `)
+            console.log(`\nWhat${enemy.name==="A group of the Queen Bee's minions"? `'re they`: `'s she`} shouting to the entire hall? "` + enemy.threatMessage + `"\n\nOMG! How embarrassing! `)
             while(enemyIsAlive && gameActive) {
                 
                 let fightOrFly = readlineSync.question('\nAre you going to react to this humilation and fight back, or are you going to try to slink by and get to class? Hit r or s ',{
