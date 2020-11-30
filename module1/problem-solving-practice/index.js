@@ -31,7 +31,7 @@ let lettersWithStrings = ["#3", "$$$", "C%4!", "Hey!"] // => ["C%4!", "Hey!"]
 
 * * * * * * * FIX! * * * * ** - Why isn't the computer finding things in my for loop?
 
-
+*/
 
 let findCharacter = (array, char) =>{
     let newArrayWithChars = []
@@ -52,7 +52,7 @@ let lettersWithStrings = ["#3", "$$$", "C%4!", "Hey!"] // => ["C%4!", "Hey!"]
 console.log(findCharacter(lettersWithStrings, "!")) 
 //console.log("hello")
 
-
+/*
 Write a function that takes a num1 and num2 and returns whether num1 is divisible by num2.
 
 isDivisible(4, 2) // => true
@@ -71,7 +71,7 @@ const findIfDivisible = (num1, num2) => {
 console.log(findIfDivisible(4,2))
 
  * * * * * * BELOW ARE RPG TESTS * * * * * * * ****
-*/
+
 let readlineSync = require('readline-sync')
 class Person { 
 
@@ -175,3 +175,4 @@ let meetEnemy = () => {
     }
 }
 console.log(meetEnemy())
+*/

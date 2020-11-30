@@ -1,83 +1,64 @@
-
-/* What am I doing here?
-1 - add item to input
-2 - click button, item gets saved to list (create array for this)
-3 - item appears below in a list, with a "remove" button next to it, that you can click and it removes the item from the array. This btuuon would be inside the loop - maybe in an if statement? Or do I need a list of objects ot deal with this? each object would have the item and whehter it was deleted or not. Object would be better with check marks and cross-out - pr. not needed for plain delete
-flaw - I can add and empty item
-
-*/
+//Start by naming the form
 const form = document.addItem
 
 form.addEventListener("submit", (e) => {
     
-    event.preventDefault()
+    e.preventDefault()
+    //name our elements to make life easier
     let list = document.getElementById("list")
     let item = form.title.value
     let li = document.createElement('li')
     let itemDiv = document.createElement('div')
     let removeBtn = document.createElement('button')
     let editBtn = document.createElement('button')
-    //li.innerHTML = "<div>" + item + "</div>"
+    //take the input from the form & add an element to the shopping list
     itemDiv.textContent = item
     list.append(li)
+    //empty out the form input again
     form.title.value = ""
     li.append(itemDiv)
+    //add two buttons to each list element
     removeBtn.textContent = "remove item"
     editBtn.textContent = "edit item"
     li.append(removeBtn)
     li.append(editBtn)
+    //what the remove button does
     removeBtn.addEventListener("click", (e) => {
         li.remove()
-    })
-    //This is supposed to create a new input box, and the value of the li is supposed to appear in it. Simultaneously, the button value is supposed to change to "save item" When typed into and the new "save" button is hit, the item should update and the input box disappear. 
+    }) 
+    //highlight the edit button green
+    editBtn.className = "green"
+    //This creates a new input box to ba able to edit each list item
     editBtn.addEventListener("click", (e) => {
-        event.preventDefault()
-    
-        /*
-        editBtn.textContent = "save"
-        editBtn.className = "green"
+        e.preventDefault()
+        //create an input form for editing
         let editable = document.createElement("input")
-        editable.value = item
         li.append(editable)
-        let newItem = editable.value
-        itemDiv.textContent = newItem
-        */
-       let editable = document.createElement("input")
-       let edited = document.createElement("input")
+        editBtn.remove()
+        //make sure the value of the item from the list appears in the input
+        editable.value = item
+        //create a save button
+        const saveButton = document.createElement("btn")
+        saveButton.className = "green"
+        saveButton.addEventListener("click", (e) => {
+          //catch the new value of the edited item from the input form
+          let newItem = editable.value
+          //add it up to the item in the list
+          itemDiv.textContent = newItem
+          //get rid of highlighting on the editbutton
+          editBtn.className = ""
 
-        if(editBtn.textContent === "edit item") {
-            editBtn.className = "green"
-            li.append(editable)
-            editable.value = item
-            const saveButton = document.createElement("btn")
-            saveButton.className = "green"
-            saveButton.addEventListener("click", (e) => {
-                itemDiv.textContent = item
-                editBtn.textContent = "edit item"
-                    editBtn.className = ""
-            })
-            //console.log("Item " + item)
-            saveButton.textContent = "save"
-            li.append(saveButton)
-        } else if(editBtn.textContent === "save") {
-            //console.dir(editable)
-            //console.log(editable)
-           //need to populate this with the content of editable, then on click save it to the div and return the button to its original state
-
-            //editable.value = newItem
-            console.log("new Item" + newItem)
-            itemDiv.textContent = newItem
-            editBtn.textContent = "edit item"
-                editBtn.className = ""
-            //editBtn.textContent = "edit item"
-            //editable.remove()
-        }else {
-            console.log("this is the third option")
-        }
-        
+          })
+        //keeping on creating the save button
+        saveButton.textContent = "save"
+        li.append(saveButton)
+        //console.log(e.target)
+        //the only thing the save button has to do it get rid of itself - the item appears in the list by itself
+        saveButton.addEventListener("click", (e) => {
+        saveButton.remove()
+        editable.remove()
         })
-        //
     })
-    
-    
-
+        
+})
+//Still to do - get rid of flaws - adding empty item to list, being able to add multiple save input boxes.

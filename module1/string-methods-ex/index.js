@@ -58,11 +58,21 @@ Make a function that takes any string and capitalizes any character that follows
 capitalize("hey friends! practice practice practice!") // -> "Hey Friends! Practice Practice Practice!"
 
 Theory: split the string in an array of its words using .split()
-        run the array through a for loop and slice off the first letter of each string, then concatenate the string back together, then do the .join("") array method to put the wrods togehter into a big string
+        run the array through a for loop and slice off the first letter of each string, then concatenate the string back together,splicing in the letter, then do the .join("") array method to put the wrods togehter into a big string
+
+ */
 
 let titleCaps = (string) => {
-
+  let split = string.split(" ")
+  let capitalized = []
+  
+  split.forEach(word => {
+      let wordArr = word.split('')
+      let firstLet = word.slice(0,1).toUpperCase()
+      wordArr.splice(0,1, firstLet)
+      capitalized.push(wordArr.join(''))
+  });
+  console.log(capitalized.join(' '))
 }
 titleCaps("Twas brillig and the slithy toves")
 
- */
