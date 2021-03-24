@@ -1,0 +1,260 @@
+@font-face {
+  font-family: "Histeria Script Demo";
+  src: local("Histeria Script Demo"),
+    url("./fonts/Histeria Script Demo.ttf") format("truetype");
+  font-weight: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'Histeria Script Demo', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: Consolas, 'Courier New',
+    monospace;
+}
+h1,h2,h3, h4, h5, h6 {
+  margin-bottom: 15px;
+}
+h1,h2,h3, h4, h5, h6, a, p{
+  color: rgb(116, 0, 89);
+}
+h1, h2, h3 {
+  color: rgb(172, 1, 132);
+}
+h1{
+  font-size: 3rem; 
+  font-family: 'Histeria Script Demo', serif;
+}
+h2{
+  font-size: 3rem; 
+  font-family: 'Histeria Script Demo', serif;
+}
+h3 {
+  font-size: 2rem;
+}
+a:hover {
+  color: rgba(31, 31, 31, 0.314);
+}
+img {
+  width: 75px;
+  height: 75px;
+}
+#root {
+}
+.App {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  box-shadow: 2px 2px 10px 2px rgba(62, 7, 7, 0.2);
+  padding: 0 5vw;
+  background-color: #fafafa;
+  position: fixed;
+  width: 100%;
+}
+
+.title-holder {
+  display: flex;
+  align-items: baseline;
+  flex: 3;
+}
+.title-holder h1 {
+  margin-bottom: 0;
+}
+.title-holder h1:hover {
+  color: rgba(31, 31, 31, 0.314);
+}
+.title-holder .logo {
+  width: 30px;
+  height: auto;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+  margin-left: 15vw;
+  margin-right: 3vw;
+}
+.container {
+  padding: 0 10vw;
+  padding-top: 100px;
+  width: 80%;
+  margin: 0 auto;
+}
+.auth-container, .profile, .public {
+}
+
+button {
+  border: 2px solid rgb(172, 1, 132);
+  margin: 16px 8px;
+  padding: 8px 20px;
+  border-radius: 2px;
+  color: rgb(172, 1, 132);
+  background-color: #fff;
+}
+button:hover {
+  border: 2px solid rgb(172, 1, 132);
+  background-color: rgb(172, 1, 132);
+  color: #ffffff;
+  /* box-shadow: 2px 2px 4px 2px rgba(62, 7, 7, 0.4); */
+}
+form {
+  /* border: 1px solid #3339; */
+  box-shadow: 2px 2px 22px 10px rgba(62, 7, 7, 0.2);
+  padding: 20px;
+  border-radius: 2px;
+  background-color: #fafafa;
+
+  display: flex;
+  flex-direction: column;
+}
+
+form > input, form > textarea {
+  border: .5px solid rgb(201, 148, 148);
+  margin: 16px 8px;
+  padding: 8px 20px;
+  border-radius: 2px;
+  color: rgb(116, 0, 89);
+}
+form > input::placeholder, form > textarea::placeholder  {
+  color: rgb(201, 148, 148);
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(254, 235, 235);
+}
+
+.auth-container > h1 {
+  font-size: 2em;
+  margin: 24px;
+}
+
+.auth-container > p {
+  margin: 16px;
+  text-decoration: underline;
+}
+
+.auth-container > form {
+  padding: 20px;
+  border-radius: 2px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container > form > input {
+  border: .5px solid rgb(201, 148, 148);
+  margin: 16px 8px;
+  padding: 8px;
+  border-radius: 2px;
+  color: rgb(116, 0, 89);
+  font-family: 'Histeria Script Demo, serif';
+}
+.auth-container > form > input::placeholder {
+  color: rgb(201, 148, 148);
+}
+.auth-container > form > button {
+  border: 2px solid rgb(172, 1, 132);
+  margin: 16px 8px;
+  padding: 8px;
+  border-radius: 2px;
+  background-color: rgb(172, 1, 132);
+  color: #f1f1f1;
+}
+.auth-container > form > button:hover {
+  border: 2px solid rgb(172, 1, 132);
+  color: rgb(172, 1, 132);
+  background-color: rgba(172, 1, 132, .1);
+}
+.errMsg {
+  max-width: 180px;
+  font-weight: 200;
+  text-align: center;
+}
+
+.controversy-list {
+  width: 100%;
+}
+
+.controversy {
+  margin-bottom: 15px;
+  box-shadow: 2px 2px 10px rgba(172, 1, 132, .1);
+}
+.controversy img {
+  width: 60%;
+  height: auto;
+}
+
+.public {
+  height: 100vh;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.profile > h1 {
+  margin: 8px;
+  font-size: 4em;
+  text-align: center;
+}
+
+.profile > h1 > span {
+  font-family: 'Histeria Script Demo', serif;
+  font-size: 4rem;
+  text-transform: capitalize;
+}
+
+.profile > h3 {
+  margin: 16px 0;
+  font-style: oblique;
+  font-weight: 300;
+  font-size: 1.5rem;
+  /* text-decoration: underline; */
+}
+
+.profile > form {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0;
+  padding: 16px;
+}
+
+.profile > form > input,
+.profile > form > button {
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 2px
+}
+
+
