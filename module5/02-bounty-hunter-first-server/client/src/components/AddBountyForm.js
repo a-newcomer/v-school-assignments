@@ -21,10 +21,10 @@ function AddBountyForm(props) {
     }
 
     function handleSubmit(e) {
+        e.preventDefault()
         props.submit(inputs, props._id)
         setInputs(initInputs)
-        console.log(inputs)
-        e.preventDefault()
+        console.log(inputs, props._id)
     }
     return (
         <form onSubmit={handleSubmit}>

@@ -61,6 +61,7 @@ h3.itemName {
 .baddieAmount {
     padding: 10px 15px;
     font-size: inherit;
+    width: 50px;
 }
 .rowTotal {
     flex: 1;
@@ -132,7 +133,6 @@ footer div {
     }
     .baddieAmount {
         padding: 10px 5px;
-        max-width: 10vw;
     }
     footer {
         flex-flow: column wrap;

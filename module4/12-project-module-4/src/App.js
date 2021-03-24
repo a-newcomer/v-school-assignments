@@ -15,7 +15,6 @@ function App() {
       <div className="contentHolder">
         <StatesMenu />
         <Switch>
-          {/* THE HOME PAGE IS COMMENTED OUT, BECAUSE IT'S THE ONE THING I CAN'T GET ROUTED CORRECTLY - IT WON'T MOVE TO AN INDIVIDUAL STATE PAGE, ALTHOUGH YOU CAN SEE THE STATE PATH IN THE URL! HOPEFULLY I'M JUST FORGETTING SOMETHING OBVIOUS HERE*/}
           <Route exact path="/" component={EntryPage}>
            <EntryPage />
           </Route>

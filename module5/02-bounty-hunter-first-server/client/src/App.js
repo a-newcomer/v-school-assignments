@@ -4,7 +4,6 @@ import Bounty from './components/Bounty'
 import AddBountyForm from './components/AddBountyForm'
 
 function App() {
-  //const bountyStart = {}
   const [bounties, setBounties] = useState([])
 
 function getBounties() {
@@ -52,7 +51,7 @@ useEffect(()=> {
       <h1>Bounty Hunter To Dos</h1>
 
       <AddBountyForm 
-        submit={addBounty} btnText="Add Bounty"/>
+        submit={addBounty} btnText="Add Bounty" />
 
       <h3>View by Order</h3>
       <select onChange={handleFilter} className="filterForm">

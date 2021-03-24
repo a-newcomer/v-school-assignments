@@ -1,6 +1,8 @@
-const { uuid } = require("uuidv4");
+//const { uuid } = require("uuidv4");
+const { v4: uuid } = require('uuid')
 
-const uuid = require('uuidv4')
+
+//const uuid = require('uuidv4')
 
 
 let bounties = [

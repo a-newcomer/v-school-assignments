@@ -22,7 +22,7 @@ let isIncluded = ( item, array) =>{
 console.log(isIncluded(item, array2))
 
 //now use this to find duplicates in the same array
-*/
+
 function FindIntersection(strArr) {
     const [str1, str2] = strArr
     //this is the same as const str1 = strArr[0], etc
@@ -41,3 +41,25 @@ function FindIntersection(strArr) {
 
 // Input: ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"]
 // Output: 1,9,10
+
+
+//Rewrite .filter method
+//write a function that takes a callback and filters an array per callback
+//We want to add a function to the array object
+//Arrow functions do not have a "this", and we need the 'this'
+Array.prototype.myFilter = function(callback){
+    console.log("this: " + this)
+    //In the above, the 'this' is the array
+    let finalArray = []
+    for(let i = 0; i < this.length; i++) {
+        if(callback(this[i])) {
+             finalArray.push(this[i])
+        }
+    }
+    return finalArray
+}
+// for testing your custom filter method
+const oddsOnly = [2, 5, 8, 2, 6].myFilter(num => num % 2 === 1)
+console.log(oddsOnly)
+
+*/

@@ -58,15 +58,15 @@ class App extends React.Component {
       <div className="App">
        <h1>React Name Badges</h1>
        <Form 
-       input={{
-        firstName: this.state.firstName,
-        lastName: this.state.lastName,
-        email: this.state.email,
-        hometown: this.state.hometown,
-        phone: this.state.phone,
-        favFood: this.state.favFood,
-        story: this.state.story
-       }} 
+        input={{
+          firstName: this.state.firstName,
+          lastName: this.state.lastName,
+          email: this.state.email,
+          hometown: this.state.hometown,
+          phone: this.state.phone,
+          favFood: this.state.favFood,
+          story: this.state.story
+        }} 
        submitHandler={this.handleSubmit} 
        changeHandler={this.handleChange} />
        <BadgeHolder badgeList={this.state.badges} />

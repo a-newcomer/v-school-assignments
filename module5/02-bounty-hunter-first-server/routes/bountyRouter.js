@@ -31,7 +31,7 @@ bountyRouter.get("/type", (req, res, next)=> {
     let chosenByType = bounties.filter(bounty => type === bounty.type)
     res.status(200).send(chosenByType)*/
 })
-//get one movie
+//get one bounty
 bountyRouter.get("/:bountyId", (req, res, next)=> {
     const bountyId = req.params.bountyId
     const foundBounty = bounties.find(bounty => bountyId === bounty._id)
@@ -64,7 +64,7 @@ bountyRouter.delete("/:bountyId", (req, res, next) => {
         return res.status(200).send(`Success! You deleted ${deletedBounty.firstName} ${deletedBounty.lastName} from the dB.`)
     })
 })
-//update
+//update i.e. edit
 bountyRouter.put("/:bountyId", (req, res, next) => {
    Bounty.findOneAndUpdate(
        {_id: req.params.bountyId},//up date which one? The one with matching id

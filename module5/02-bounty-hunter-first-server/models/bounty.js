@@ -19,7 +19,7 @@ const bountySchema = new Schema({
     type: {
         type: String,
         required: true,
-        enum: ["sith","jedi", "unknown"]
+        enum: ["sith", "Sith", "jedi", "Jedi", "unknown"]
     },
     alive: Boolean
 })

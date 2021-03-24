@@ -10,6 +10,7 @@ function CardContextProvider(props) {
     const addKittyCard = (uRL, title, desc) => setKittyCards((prevArray) => [...prevArray,{uRL, title, desc}])
     
     console.log(kittyCards)
+    
     return(
         <CardContext.Provider value={{kittyCards,addKittyCard}}>
             {props.children}
