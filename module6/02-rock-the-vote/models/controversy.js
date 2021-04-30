@@ -19,12 +19,11 @@ const controversySchema = new Schema({
     ref: "User",
     required: true
   },
-  comment: {
-    type: Schema.Types.ObjectId,
-    ref: "Comment"
+  upVotes: {
+    type: Array
   },
-  voteCount: {
-    type: Number
+  downVotes: {
+    type: Array
   }
 })
 

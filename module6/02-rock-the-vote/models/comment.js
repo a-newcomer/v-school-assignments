@@ -1,10 +1,19 @@
-import { text } from "express"
-import mongoose from "mongoose"
+const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 const commentSchema = new Schema({
   comment: {
-    type: text,
+    type: String,
+    required: true
+  },
+  controversy: {
+    type: Schema.Types.ObjectId,
+    ref: "Controversy",
+    required: true
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
     required: true
   }
 })

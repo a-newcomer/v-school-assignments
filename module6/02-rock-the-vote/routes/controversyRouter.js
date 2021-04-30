@@ -1,4 +1,5 @@
 const express = require("express")
+const controversy = require("../models/controversy.js")
 const controversyRouter = express.Router()
 const Controversy = require('../models/controversy.js')
 
@@ -10,6 +11,10 @@ controversyRouter.get("/", (req, res, next) => {
       return next(err)
     }
     return res.status(200).send(controversies)
+  })
+  .populate('user')
+  .exec(function(err, user) {
+    if(err) return next(err)
   })
 })
 
@@ -37,16 +42,51 @@ controversyRouter.post("/", (req, res, next) => {
   })
 })
 
-// Delete Controversy
-controversyRouter.delete("/:controversyId", (req, res, next) => {
-  Controversy.findOneAndDelete(
-    { _id: req.params.controversyId, user: req.user._id },
-    (err, deletedControversy) => {
+// Update Controversy with a userID to upvote array
+controversyRouter.put("/likes/:controversyId", (req, res, next) => {
+  Controversy.findOneAndUpdate(
+    { _id: req.params.controversyId },
+    //
+    {$addToSet: {upVotes: req.user._id}},
+    { new: true },
+    (err, updatedControversy) => {
       if(err){
         res.status(500)
         return next(err)
       }
-      return res.status(200).send(`Successfully deleted Controversy: ${deletedControversy}`)
+      return res.status(201).send(updatedControversy)
+    }
+  )
+})
+
+// Delete/Update Controversy by deleting an upvote from a specific controversy
+controversyRouter.delete("/likes/:controversyId", (req, res, next) => {
+  Controversy.findOneAndDelete (
+    //{ _id: req.params.controversyId, upVotes: req.user._id },
+   console.log(req.user),
+   
+    (err, deletedUpVote) => {
+      if(err){
+        res.status(500)
+        return next(err)
+      }
+      return res.status(201).send(deletedUpVote)
+    }
+  )
+})
+
+// Update Controversy with a userID to downvote array
+controversyRouter.put("/dislikes/:controversyId", (req, res, next) => {
+  Controversy.findOneAndUpdate(
+    { _id: req.params.controversyId },
+    {$addToSet: {downVotes: req.user._id}},
+    { new: true },
+    (err, updatedControversy) => {
+      if(err){
+        res.status(500)
+        return next(err)
+      }
+      return res.status(201).send(updatedControversy)
     }
   )
 })

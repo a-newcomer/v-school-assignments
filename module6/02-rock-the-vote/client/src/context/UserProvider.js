@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react'
+import React, {useState} from 'react'
 import axios from 'axios'
 
 export const UserContext = React.createContext()
@@ -54,7 +54,7 @@ function logout() {
     token: "",
     controversiesByCurrentUser: []
   })
-  console.log("userstate at end of logout",userState.controversiesByCurrentUser)
+  //console.log("userstate at end of logout",userState.controversiesByCurrentUser)
 }
 
 function handleAuthErr(errMsg) {

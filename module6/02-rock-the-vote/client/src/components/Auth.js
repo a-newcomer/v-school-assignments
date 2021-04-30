@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react'
-import { ControversyContext } from '../context/ControversyProvider.js'
 import { UserContext } from '../context/UserProvider.js'
 import AuthForm from './AuthForm.js'
 

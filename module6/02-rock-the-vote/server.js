@@ -23,6 +23,7 @@ mongoose.connect(
 app.use('/auth', require('./routes/authRouter.js'))
 app.use('/api', expressJwt( {secret: process.env.SECRET, algorithms: ['HS256'] })) //This adds req.user to the req body, the first step in connecting authorization to our other routes
 app.use('/api/controversies', require('./routes/controversyRouter.js'))
+app.use('/api/comments', require('./routes/commentRouter.js'))
 
 app.use((err, req, res, next) => {
   console.log(err)

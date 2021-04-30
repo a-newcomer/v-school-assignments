@@ -20,11 +20,13 @@ export default function AuthForm(props){
         onChange={handleChange} 
         placeholder="Username"/>
       <input 
-        type="text" 
+        type="password" 
         value={password} 
         name="password" 
         onChange={handleChange} 
-        placeholder="Password"/>
+        placeholder="Password"
+        //minLength="6"
+        />
       <button>{ btnText }</button>
       <h6 className="errMsg" style={{color: "red"}}>{errMsg}</h6>
     </form>

@@ -10,30 +10,31 @@ import { UserContext } from './context/UserProvider.js'
 
 function App() {
   const { token, logout } = useContext(UserContext)
-  //console.log("token in App is ",token)
+  //console.log("token in App is ", token)
   return (
     <div className="App">
      
-    <Navbar logout={logout} token={token} />
+      <Navbar logout={logout} token={token} />
 
-    <Switch >
+      <Switch >
 
-      <Route exact path="/" >
-        { token ? <Redirect to="/profile" /> : <Auth /> }
-      </Route>
+        <Route exact path="/" >
+          { token ? <Redirect to="/profile" /> : <Auth /> }
+        </Route>
 
-      <ProtectedRoute 
-      token={token}
-      path="/profile"
-      redirectTo="/"
-      component={Profile} />
-      {/* <Profile /> */}
+        <ProtectedRoute 
+        token={token}
+        path="/profile"
+        redirectTo="/"
+        component={Profile} />
 
-      <Route path="/public">
-        <Public />
-      </Route>
+        <ProtectedRoute 
+          token={token}
+          path="/public"
+          redirectTo="/"
+          component={Public} />
 
-    </Switch>
+      </Switch>
     </div>
   );
 }

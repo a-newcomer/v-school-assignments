@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/heart-icon.svg'
 import { Link } from 'react-router-dom'
 
 function Navbar(props){
@@ -13,7 +13,7 @@ function Navbar(props){
       </Link>
       <div className="nav-links">
         {props.token && <Link to="/profile">Profile</Link>}
-        <Link to="/public">Public</Link>
+        {props.token && <Link to="/public">All Reviews</Link>}
       </div>
       <button onClick={props.logout}>Logout</button>
     </div>

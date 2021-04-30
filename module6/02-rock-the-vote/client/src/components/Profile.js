@@ -5,15 +5,12 @@ import ControversyForm from './ControversyForm.js'
 import ControversyList from './ControversyList.js'
 
 function Profile(){
-  
   //const thisUser = useContext(UserContext)
   //I could do the above, or I could destructure an inner object
   const {
     user: {username}
   } = useContext(UserContext)
-  const 
-    {getUserReviews}
-  = useContext(ControversyContext)
+  const {getUserReviews} = useContext(ControversyContext)
 
 
   //* Moved useEffect from ControversyProvider to remove login bug - now must import getUserReviews from there
@@ -29,10 +26,10 @@ useEffect(()=>{
   //console.log("controversiesByCurrentUser: ",controversiesByCurrentUser, typeof controversiesByCurrentUser)
   return (
     <div className="container profile">
-      <h1>Welcome @<span>{username}</span>!</h1>
-      {controversiesByCurrentUser != 0 && <h3>Your Review Requests:</h3>}
+      <h1>Welcome @<span className="controversy-author">{username}</span>!</h1>
+      {controversiesByCurrentUser != 0 && <h4>Your Review Requests:</h4>}
       <ControversyList controversies={controversiesByCurrentUser} />
-      <h3>Add A Review Request:</h3>
+      <h4>Add A Review Request:</h4>
       <ControversyForm addReview={addReview} />
     </div>
   )

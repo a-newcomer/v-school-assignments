@@ -12,10 +12,6 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true
-  },
-  votedOn: {
-    type: Schema.Types.ObjectId,
-    ref: "Controversy"
   }
 })
 //the below is a function called a pre-save hook to encrypt passwords - it needs to be a "function", not anon, so we can use "this"
